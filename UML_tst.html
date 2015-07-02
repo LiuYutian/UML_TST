@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>UML_TST</title>
+    <script src="lodash.src.js"></script>
+    <script src="question.js"></script>
+    <script src="questionsBank.js"></script>
+    <script src="formValueGetter.js"></script>
+    <script src="scoreCalculate.js"></script>
 </head>
 <body>
-    <form action="">
+    <form id="formData">
         西安软件服务外包学院<br><hr>
         统一建模语言理论测试<br>
         考试科目：<input type="text" readonly value="统一建模语言 UML">
         时间：<input type="text" readonly value="100分钟">
-        得分：<input id="score" type="text" readonly value="100">
+        得分：<input name="score", id="score" type="text" readonly>
         <br>
-        班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：<input id="clas" type="text">
-        学号：<input id="classNumber" type="text">
-        姓名：<input id="name" type="text"><br>
+        班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：<input name="class" id="class" type="text">
+        学号：<input name="classNumber" id="classNumber" type="text">
+        姓名：<input name="name" id="name" type="text"><br>
         一、填空题<br>
         1、U&nbsp;M&nbsp;L&nbsp;的中文全称是：<input name="oneFill" type="text"><br>
-        2、对象最突出的特征是：<input name="twoFill1" type="text">&nbsp;、<input name="twoFill2" type="text">&nbsp;、<input name="twoFill3" type="text"><br>
+        2、对象最突出的特征是：<input name="twoFill" type="text">&nbsp;、<input name="twoFill" type="text">&nbsp;、<input name="twoFill" type="text"><br>
         二、选择题<br>
         1、UML与软件工程的关系是：<br>
         <input type="radio" name="select1">(A) UML就是软件工程<br>
@@ -47,7 +52,7 @@
             【<input type="radio" name="judge2"> √ <input type="radio" name="judge2"> × 】<br>
         五、简答题 （每题 4 分， 共20分）<br>
         1、简述什么是模型以及模型的表现形式？<br>
-        <textarea name="shortAanswer"></textarea><br>
+        <textarea name="shortAanswer" style="resize: none; width:200px; height:50px;"></textarea><br>
         <input id="commit" type="button" value="提交">
         <input type="reset" value="重置">
     </form>
