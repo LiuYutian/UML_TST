@@ -13,6 +13,167 @@ document.getElementById("classNumber").addEventListener("keydown", function(evt)
     }
 });
 
+document.getElementById("select1a").addEventListener("click", function() {
+    document.getElementById("select1").innerHTML = "A";
+});
+
+document.getElementById("select1b").addEventListener("click", function() {
+    document.getElementById("select1").innerHTML = "B";
+});
+
+document.getElementById("select1c").addEventListener("click", function() {
+    document.getElementById("select1").innerHTML = "C";
+});
+
+document.getElementById("select1d").addEventListener("click", function() {
+    document.getElementById("select1").innerHTML = "D";
+});
+
+document.getElementById("select2a").addEventListener("click", function() {
+    document.getElementById("select2").innerHTML = "A";
+});
+
+document.getElementById("select2b").addEventListener("click", function() {
+    document.getElementById("select2").innerHTML = "B";
+});
+
+document.getElementById("select2c").addEventListener("click", function() {
+    document.getElementById("select2").innerHTML = "C";
+});
+
+document.getElementById("select2d").addEventListener("click", function() {
+    document.getElementById("select2").innerHTML = "D";
+});
+
+document.getElementById("selects1a").addEventListener("click", function() {
+    var inner = document.getElementById("selects1").innerHTML;
+    var index = inner.indexOf("A");
+    var result = ""
+    if(index === -1){
+        result = inner + "A";
+    }else {
+        _.forEach(inner, function(n, i) {
+            if(i !== index) {
+                result += n;
+            }
+        });
+    }
+    document.getElementById("selects1").innerHTML = result;
+});
+
+document.getElementById("selects1b").addEventListener("click", function() {
+    var inner = document.getElementById("selects1").innerHTML;
+    var index = inner.indexOf("B");
+    var result = ""
+    if(index === -1){
+        result = inner + "B";
+    }else {
+        _.forEach(inner, function(n, i) {
+            if(i !== index) {
+                result += n;
+            }
+        });
+    }
+    document.getElementById("selects1").innerHTML = result;
+});
+
+document.getElementById("selects1c").addEventListener("click", function() {
+    var inner = document.getElementById("selects1").innerHTML;
+    var index = inner.indexOf("C");
+    var result = ""
+    if(index === -1){
+        result = inner + "C";
+    }else {
+        _.forEach(inner, function(n, i) {
+            if(i !== index) {
+                result += n;
+            }
+        });
+    }
+    document.getElementById("selects1").innerHTML = result;
+});
+
+document.getElementById("selects1d").addEventListener("click", function() {
+    var inner = document.getElementById("selects1").innerHTML;
+    var index = inner.indexOf("D");
+    var result = ""
+    if(index === -1){
+        result = inner + "D";
+    }else {
+        _.forEach(inner, function(n, i) {
+            if(i !== index) {
+                result += n;
+            }
+        });
+    }
+    document.getElementById("selects1").innerHTML = result;
+});
+
+document.getElementById("selects2a").addEventListener("click", function() {
+    var inner = document.getElementById("selects2").innerHTML;
+    var index = inner.indexOf("A");
+    var result = ""
+    if(index === -1){
+        result = inner + "A";
+    }else {
+        _.forEach(inner, function(n, i) {
+            if(i !== index) {
+                result += n;
+            }
+        });
+    }
+    document.getElementById("selects2").innerHTML = result;
+});
+
+document.getElementById("selects2b").addEventListener("click", function() {
+    var inner = document.getElementById("selects2").innerHTML;
+    var index = inner.indexOf("B");
+    var result = ""
+    if(index === -1){
+        result = inner + "B";
+    }else {
+        _.forEach(inner, function(n, i) {
+            if(i !== index) {
+                result += n;
+            }
+        });
+    }
+    document.getElementById("selects2").innerHTML = result;
+});
+
+document.getElementById("selects2c").addEventListener("click", function() {
+    var inner = document.getElementById("selects2").innerHTML;
+    var index = inner.indexOf("C");
+    var result = ""
+    if(index === -1){
+        result = inner + "C";
+    }else {
+        _.forEach(inner, function(n, i) {
+            if(i !== index) {
+                result += n;
+            }
+        });
+    }
+    document.getElementById("selects2").innerHTML = result;
+});
+
+document.getElementById("selects2d").addEventListener("click", function() {
+    var inner = document.getElementById("selects2").innerHTML;
+    var index = inner.indexOf("D");
+    var result = ""
+    if(index === -1){
+        result = inner + "D";
+    }else {
+        _.forEach(inner, function(n, i) {
+            if(i !== index) {
+                result += n;
+            }
+        });
+    }
+    document.getElementById("selects2").innerHTML = result;
+});
+
+
 var check = function() {
     return !(document.getElementById("class").value === "" ||
     document.getElementById("classNumber").value === "" ||
