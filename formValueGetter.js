@@ -1,4 +1,3 @@
-var SELECTVALUE = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
 function FormValueGetter(form) {
     this.namesRepeat = [];
     var thi = this;
@@ -13,7 +12,6 @@ function FormValueGetter(form) {
 FormValueGetter.prototype.getValues = function() {
     var names = getName(this.namesRepeat);
     var value = getValue(names);
-
     var result = [];
 
     _.forEach(names, function(n, i) {
@@ -36,12 +34,10 @@ var getValue = function(names) {
 var getNameValue = function(elements) {
     var type = elements[0].type;
 
-    if(type === "text") {
+    if(type === "text" || type === "textarea") {
         return getNameText(elements);
     }else if(type === "radio" || type === "checkbox") {
         return getNameSelect(elements);
-    }else if(type === "textarea") {
-        return getNameTextarea(elements);
     }
 }
 
@@ -56,17 +52,13 @@ var getNameText = function(elements) {
 
 var getNameSelect = function(elements) {
     var result = [];
-    _.forEach(elements, function(n, i) {
-        if(n.checked === true) {
-            result.push(SELECTVALUE[i]);
+    _.forEach(elements, function(element, i) {
+        if(element.checked === true) {
+            result.push(element.value);
         }
     })
 
     return result;
-}
-
-var getNameTextarea = function(elements) {
-    return elements[0].value;
 }
 
 var getName = function(namess) {
