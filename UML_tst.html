@@ -11,52 +11,71 @@
 </head>
 <body>
     <form id="formData">
-        西安软件服务外包学院<br><hr>
-        统一建模语言理论测试<br>
-        考试科目：<input type="text" readonly value="统一建模语言 UML">
-        时间：<input type="text" readonly value="100分钟">
-        得分：<input name="score", id="score" type="text" readonly>
-        <br>
-        班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：<input name="class" id="class" type="text">
-        学号：<input name="classNumber" id="classNumber" type="text">
-        姓名：<input name="name" id="name" type="text"><br>
-        一、填空题<br>
-        1、U&nbsp;M&nbsp;L&nbsp;的中文全称是：<input name="oneFill" type="text"><br>
-        2、对象最突出的特征是：<input name="twoFill" type="text">&nbsp;、<input name="twoFill" type="text">&nbsp;、<input name="twoFill" type="text"><br>
-        二、选择题<br>
-        1、UML与软件工程的关系是：【<span id="select1"></span>】<br>
-        <input id="select1a" type="radio" name="select1" value="A">(A) UML就是软件工程<br>
-        <input id="select1b" type="radio" name="select1" value="B">(B) UML参与软件工程中软件开发过程的几个阶段<br>
-        <input id="select1c" type="radio" name="select1" value="C">(C) UML与软件工程无关<br>
-        <input id="select1d" type="radio" name="select1" value="D">(D) UML是软件工程的一部分<br>
-        2、Java软件支持：【<span id="select2"></span>】<br>
-        <input id="select2a" type="radio" name="select2" value="A">(A) 单继承<br>
-        <input id="select2b" type="radio" name="select2" value="B">(B) 多继承<br>
-        <input id="select2c" type="radio" name="select2" value="C">(C) 单继承和多继承都支持<br>
-        <input id="select2d" type="radio" name="select2" value="D">(D) 单继承和多继承都不支持<br>
-        三、多选题<br>
-        1、用例的粒度分别为以下哪三种。【<span id="selects1"></span>】<br>
-        <input id="selects1a" type="checkbox" name="selects1" value="A">(A) 概念级<br>
-        <input id="selects1b" type="checkbox" name="selects1" value="B">(B) 需求级<br>
-        <input id="selects1c" type="checkbox" name="selects1" value="C">(C) 用户目标级<br>
-        <input id="selects1d" type="checkbox" name="selects1" value="D">(D) 子功能级<br>
-        2、类图由以下哪三部分组成。【<span id="selects2"></span>】<br>
-        <input id="selects2a" type="checkbox" name="selects2" value="A">(A) 名称(Name)<br>
-        <input id="selects2b" type="checkbox" name="selects2" value="B">(B) 属性(Attrbute)<br>
-        <input id="selects2c" type="checkbox" name="selects2" value="C">(C) 操作(Operation)<br>
-        <input id="selects2d" type="checkbox" name="selects2" value="D">(D) 方法(Function)<br>
-        四、判断题<br>
-        1、用例图只是用于和客户交流和沟通的，用于确定需求。
-            【<input type="radio" name="judge1" value="√"> √
-            <input type="radio" name="judge1" value="×"> × 】<br>
-        2、在状态图中，终止状态在一个状态图中允许有任意多个。
-            【<input type="radio" name="judge2" value="√"> √
-            <input type="radio" name="judge2" value="×"> × 】<br>
-        五、简答题 （每题 4 分， 共20分）<br>
-        1、简述什么是模型以及模型的表现形式？<br>
-        <textarea name="shortAanswer" style="resize: none; width:200px; height:50px;"></textarea><br>
-        <input id="commit" type="button" value="提交">
-        <input type="reset" value="重置">
+        <div id="school">西安软件服务外包学院</div><br><hr id="thread">
+        <div id="subject">统一建模语言理论测试</div><br>
+        <div id="examInfo">
+            考试科目：<input class="info text" type="text" readonly value="统一建模语言 UML">
+            时间：<input class="info text" type="text" readonly value="100分钟">
+            得分：<input class="info text" name="score", id="score" type="text" readonly>
+        </div>
+        <div id="studentInfo">
+            班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级：<input class="info text" name="class" id="class" type="text" placeholder="请输入班级">
+            学号：<input class="info text" name="classNumber" id="classNumber" type="text"  placeholder="请输入学号">
+            姓名：<input class="info text" name="name" id="name" type="text" placeholder="请输入姓名">
+        </div><br>
+        <h2 class="questionType">一、填空题</h2>
+        <div class="question">1、UML&nbsp;的中文全称是：</div><input class="text" name="oneFill" type="text">。<br>
+        <div class="question">2、对象最突出的特征是：</div><input class="text" name="twoFill" type="text">&nbsp;、<input class="text" name="twoFill" type="text">&nbsp;、<input class="text" name="twoFill" type="text">
+        <h2 class="questionType">二、选择题</h2>
+        <div class="question">1、UML与软件工程的关系是：【<span id="select1"></span>】</div><br>
+        <input id="select1a" class="question" type="radio" name="select1" value="A">
+        <label for="select1a" class="questionText">(A) UML就是软件工程</label><br>
+        <input id="select1b" class="question" type="radio" name="select1" value="B">
+        <label for="select1b" class="questionText">(B) UML参与软件工程中软件开发过程的几个阶段</label><br>
+        <input id="select1c" class="question" type="radio" name="select1" value="C">
+        <label for="select1c" class="questionText">(C) UML与软件工程无关</label><br>
+        <input id="select1d" class="question" type="radio" name="select1" value="D">
+        <label for="select1d" class="questionText">(D) UML是软件工程的一部分</label><br>
+        <div class="question">2、Java软件支持：【<span id="select2"></span>】</div><br>
+        <input id="select2a" class="question" type="radio" name="select2" value="A">
+        <label for="select2a" class="questionText">(A) 单继承</label><br>
+        <input id="select2b" class="question" type="radio" name="select2" value="B">
+        <label for="select2b" class="questionText">(B) 多继承</label><br>
+        <input id="select2c" class="question" type="radio" name="select2" value="C">
+        <label for="select2c" class="questionText">(C) 单继承和多继承都支持</label><br>
+        <input id="select2d" class="question" type="radio" name="select2" value="D">
+        <label for="select2d" class="questionText">(D) 单继承和多继承都不支持</label><br>
+        <h2 class="questionType">三、多选题</h2>
+        <div class="question">1、用例的粒度分别为以下哪三种。【<span id="selects1"></span>】</div><br>
+        <input id="selects1a" class="question" type="checkbox" name="selects1" value="A">
+        <label for="selects1a" class="questionText">(A) 概念级</label><br>
+        <input id="selects1b" class="question" type="checkbox" name="selects1" value="B">
+        <label for="selects1b" class="questionText">(B) 需求级</label><br>
+        <input id="selects1c" class="question" type="checkbox" name="selects1" value="C">
+        <label for="selects1c" class="questionText">(C) 用户目标级</label><br>
+        <input id="selects1d" class="question" type="checkbox" name="selects1" value="D">
+        <label for="selects1d" class="questionText">(D) 子功能级</label><br>
+        <div class="question">2、类图由以下哪三部分组成。【<span id="selects2"></span>】</div><br>
+        <input id="selects2a" class="question" type="checkbox" name="selects2" value="A">
+        <label for="selects2a" class="questionText">(A) 名称(Name)</label><br>
+        <input id="selects2b" class="question" type="checkbox" name="selects2" value="B">
+        <label for="selects2b" class="questionText">(B) 属性(Attrbute)</label><br>
+        <input id="selects2c" class="question" type="checkbox" name="selects2" value="C">
+        <label for="selects2c" class="questionText">(C) 操作(Operation)</label><br>
+        <input id="selects2d" class="question" type="checkbox" name="selects2" value="D">
+        <label for="selects2d" class="questionText">(D) 方法(Function)</label><br>
+        <h2 class="questionType">四、判断题</h2>
+        <div class="question">1、用例图只是用于和客户交流和沟通的，用于确定需求。</div>
+        <div class="questionText">【<input type="radio" name="judge1" value="√" id="judge1v"><label for="judge1v"> √ </label>
+            <input type="radio" name="judge1" value="×" id="judge1x"><label for="judge1x"> × </label>】</div><br>
+        <div class="question">2、在状态图中，终止状态在一个状态图中允许有任意多个。</div>
+        <div class="questionText">【<input type="radio" name="judge2" value="√" id="judge2v"><label for="judge2v"> √ </label>
+            <input type="radio" name="judge2" value="×" id="judge2x"><label for="judge2x"> × </label>】</div><br>
+        <h2 class="questionType">五、简答题 （每题 4 分， 共20分）</h2>
+        <div class="question">1、简述什么是模型以及模型的表现形式？</div><br>
+        <div class="question"><textarea name="shortAanswer" cols="40" rows="5" id="shortAanswer"></textarea></div><br>
+        <div class="question"><input class="button" id="commit" type="button" value="提交"></div>
+        <div class="question"><input class="button" type="reset" value="重置"></div>
     </form>
 </body>
 <script src="./UML_tst.js"></script>
